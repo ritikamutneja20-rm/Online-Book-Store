@@ -1,10 +1,14 @@
 # 📚 Online Book Store
 
 > **A thoughtfully designed frontend e-commerce experience for discovering, saving, and shopping for books.**
+## 🌐 Live Demo
+
+🚀 **[Visit Online Book Store](https://ritikamutneja20-rm.github.io/Online-Book-Store/)**
+A fully deployed, responsive frontend e-commerce experience for discovering and shopping for books.
 
 Online Book Store is a responsive web application that transforms a simple bookstore concept into a complete digital shopping experience.
 
-From discovering books and exploring their details to managing a wishlist, building a cart, completing checkout, and receiving an order confirmation — the application brings the complete customer journey together using **HTML, CSS, and JavaScript**.
+From discovering books and exploring their details to managing a Wishlist, building a cart, completing checkout, and receiving an order confirmation — the application brings the complete customer journey together using **HTML, CSS, and JavaScript**.
 
 ---
 
