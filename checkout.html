@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - Online Book Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                📚 Online Book Store
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="catalogue.html">Books</a>
+
+                <a href="cart.html">Cart 🛒</a>
+
+                <a href="wishlist.html">Wishlist ❤️</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="register.html" class="register-btn">
+                    Register
+                </a>
+
+                <button
+                    class="theme-btn"
+                    onclick="toggleDarkMode()"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Checkout -->
+
+    <main class="checkout-page">
+
+        <div class="checkout-container">
+
+            <!-- Form -->
+
+            <div class="checkout-form">
+
+                <p class="small-title">
+                    SECURE CHECKOUT
+                </p>
+
+                <h1>Complete Your Order</h1>
+
+                <p class="checkout-subtitle">
+                    Enter your details to place your order.
+                </p>
+
+
+                <form
+                    id="checkoutForm"
+                    onsubmit="placeOrder(event)"
+                >
+
+                    <label for="checkoutName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="checkoutName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+
+                    <label for="checkoutEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="checkoutEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <label for="address">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        placeholder="Enter your complete address"
+                        rows="4"
+                        required
+                    ></textarea>
+
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="Enter your city"
+                        required
+                    >
+
+
+                    <label for="pincode">
+                        PIN Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="pincode"
+                        placeholder="Enter 6-digit PIN code"
+                        maxlength="6"
+                        required
+                    >
+
+
+                    <label for="payment">
+                        Payment Method
+                    </label>
+
+                    <select id="payment" required>
+
+                        <option value="">
+                            Select payment method
+                        </option>
+
+                        <option value="cod">
+                            Cash on Delivery
+                        </option>
+
+                        <option value="upi">
+                            UPI
+                        </option>
+
+                        <option value="card">
+                            Credit / Debit Card
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="submit"
+                        class="place-order-btn"
+                    >
+                        Place Order 🎉
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Order Summary -->
+
+            <div class="checkout-summary">
+
+                <h2>Order Summary</h2>
+
+                <div
+                    id="checkoutItems"
+                    class="checkout-items"
+                >
+                    <!-- JavaScript -->
+                </div>
+
+                <hr>
+
+                <div class="checkout-total">
+
+                    <span>Total</span>
+
+                    <strong id="checkoutTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Online Book Store</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

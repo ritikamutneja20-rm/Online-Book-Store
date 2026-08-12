@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Online Book Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                📚 Online Book Store
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="catalogue.html">Books</a>
+                <a href="cart.html">Cart 🛒</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="register-btn">
+                    Register
+                </a>
+                <a href="wishlist.html">Wishlist ❤️</a>
+                <button class="theme-btn" onclick="toggleDarkMode()" title="Toggle dark mode">
+    🌙
+</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Cart Header -->
+    <section class="cart-header">
+
+        <p class="small-title">YOUR SHOPPING CART</p>
+
+        <h1>Your Cart</h1>
+
+        <p>
+            Review your selected books before checkout.
+        </p>
+
+    </section>
+
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+
+        <div class="cart-items" id="cartItems">
+            <!-- JavaScript will add cart items here -->
+        </div>
+
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Items</span>
+                <span id="itemCount">0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span>FREE</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="finalTotal">₹0</span>
+            </div>
+
+            <button
+                class="checkout-btn"
+                onclick="checkout()"
+            >
+                Proceed to Checkout
+            </button>
+
+            <button
+                class="clear-cart-btn"
+                onclick="clearCart()"
+            >
+                Clear Cart
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© Online Book Store</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

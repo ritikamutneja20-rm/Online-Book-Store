@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Details - Online Book Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                📚 Online Book Store
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="catalogue.html">Books</a>
+
+                <a href="cart.html">Cart 🛒</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="register.html" class="register-btn">
+                    Register
+                </a>
+                
+                <a href="wishlist.html">Wishlist ❤️</a>
+                <button class="theme-btn" onclick="toggleDarkMode()" title="Toggle dark mode">
+    🌙
+</button>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Book Details -->
+
+    <main class="details-page">
+
+        <div class="details-card">
+
+            <!-- Book Cover -->
+
+            <div class="details-cover" id="detailsCover">
+                📖
+            </div>
+
+
+            <!-- Information -->
+
+            <div class="details-info">
+
+                <span class="book-category" id="detailsCategory">
+                    Category
+                </span>
+
+                <h1 id="detailsName">
+                    Book Name
+                </h1>
+
+                <div class="details-rating">
+                    ⭐⭐⭐⭐⭐
+                    <span>4.5 / 5</span>
+                </div>
+
+                <p class="details-description">
+
+                    This book is a useful resource for students
+                    who want to improve their knowledge and
+                    understanding of the subject.
+
+                </p>
+
+
+                <div class="details-price" id="detailsPrice">
+                    ₹0
+                </div>
+
+
+                <div class="details-actions">
+
+                    <button
+                        class="cart-btn"
+                        id="detailsCartButton"
+                    >
+                        🛒 Add to Cart
+                    </button>
+
+                    <button
+                        class="wishlist-btn"
+                        id="detailsWishlistButton"
+                    >
+                        ❤️ Add to Wishlist
+                    </button>
+
+                </div>
+
+
+                <a
+                    href="catalogue.html"
+                    class="back-link"
+                >
+                    ← Back to Books
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Online Book Store</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

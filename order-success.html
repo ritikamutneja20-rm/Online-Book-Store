@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed - Online Book Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                📚 Online Book Store
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="catalogue.html">Books</a>
+
+                <a href="cart.html">Cart 🛒</a>
+
+                <a href="wishlist.html">Wishlist ❤️</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="register.html" class="register-btn">
+                    Register
+                </a>
+
+                <button
+                    class="theme-btn"
+                    onclick="toggleDarkMode()"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="success-page">
+
+        <div class="success-card">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>
+                Order Placed Successfully!
+            </h1>
+
+            <p class="success-message">
+                Thank you for shopping with Online Book Store.
+                Your order has been placed successfully.
+            </p>
+
+
+            <div class="order-info">
+
+                <div>
+                    <span>Order ID</span>
+                    <strong id="orderId">
+                        OBS-00000
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Order Date</span>
+                    <strong id="orderDate">
+                        -
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Total Amount</span>
+                    <strong id="orderTotal">
+                        ₹0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <p class="delivery-message">
+                📦 Your books will be delivered soon.
+            </p>
+
+
+            <div class="success-buttons">
+
+                <a
+                    href="catalogue.html"
+                    class="success-btn"
+                >
+                    Continue Shopping
+                </a>
+
+                <a
+                    href="index.html"
+                    class="back-home-btn"
+                >
+                    Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>Online Book Store</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

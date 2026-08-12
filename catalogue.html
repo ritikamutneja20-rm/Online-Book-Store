@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - Online Book Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">📚 Online Book Store</div>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="catalogue.html">Books</a>
+                <a href="cart.html">Cart 🛒</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+                <a href="wishlist.html">Wishlist ❤️</a>
+                <button class="theme-btn" onclick="toggleDarkMode()" title="Toggle dark mode">
+    🌙
+</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Catalogue Header -->
+    <section class="catalogue-header">
+        <p class="small-title">OUR COLLECTION</p>
+        <h1>Explore Our Books</h1>
+        <p>Find the right book for your learning journey.</p>
+    </section>
+
+
+    <!-- Search and Filter -->
+    <section class="book-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search books..."
+            onkeyup="searchBooks()"
+        >
+
+        <select id="categoryFilter" onchange="filterBooks()">
+            <option value="all">All Categories</option>
+            <option value="programming">Programming</option>
+            <option value="web">Web Development</option>
+            <option value="database">Database</option>
+            <option value="academic">Academic</option>
+        </select>
+
+    </section>
+
+
+    <!-- Books -->
+    <section class="books-container">
+
+        <!-- Book 1 -->
+        <div class="book-card" data-category="programming">
+
+            <div class="book-cover programming-cover">
+                💻
+            </div>
+
+            <div class="book-info">
+                <span class="book-category">Programming</span>
+
+                <div class="book-rating">
+    ⭐⭐⭐⭐⭐ <span>4.5</span>
+</div>
+
+                <h3>Learning C Programming</h3>
+
+                <p class="author">By R. Sharma</p>
+
+                <p class="description">
+                    Learn programming fundamentals, loops,
+                    functions and arrays.
+                </p>
+
+                <div class="book-bottom">
+                    <span class="price">₹299</span>
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart('Learning C Programming', 299)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Book 2 -->
+        <div class="book-card" data-category="programming">
+
+            <div class="book-cover java-cover">
+                ☕
+            </div>
+
+            <div class="book-info">
+                <span class="book-category">Programming</span>
+
+                <div class="book-rating">
+    ⭐⭐⭐⭐⭐ <span>4.5</span>
+</div>
+
+                <h3>Java Programming</h3>
+
+                <p class="author">By A. Kumar</p>
+
+                <p class="description">
+                    Understand Java, OOP concepts,
+                    classes and inheritance.
+                </p>
+
+                <div class="book-bottom">
+                    <span class="price">₹399</span>
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart('Java Programming', 399)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Book 3 -->
+        <div class="book-card" data-category="web">
+
+            <div class="book-cover web-cover">
+                🌐
+            </div>
+
+            <div class="book-info">
+                <span class="book-category">Web Development</span>
+
+                <div class="book-rating">
+    ⭐⭐⭐⭐⭐ <span>4.5</span>
+</div>
+
+                <h3>HTML & CSS Mastery</h3>
+
+                <p class="author">By A. Verma</p>
+
+                <p class="description">
+                    Build attractive websites using
+                    HTML5 and modern CSS.
+                </p>
+
+                <div class="book-bottom">
+                    <span class="price">₹349</span>
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart('HTML & CSS Mastery', 349)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Book 4 -->
+        <div class="book-card" data-category="web">
+
+            <div class="book-cover javascript-cover">
+                JS
+            </div>
+
+            <div class="book-info">
+                <span class="book-category">Web Development</span>
+
+                <div class="book-rating">
+    ⭐⭐⭐⭐⭐ <span>4.5</span>
+</div>
+
+                <h3>JavaScript Essentials</h3>
+
+                <p class="author">By S. Mehta</p>
+
+                <p class="description">
+                    Learn JavaScript basics, DOM,
+                    events and interactive websites.
+                </p>
+
+                <div class="book-bottom">
+                    <span class="price">₹449</span>
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart('JavaScript Essentials', 449)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Book 5 -->
+        <div class="book-card" data-category="database">
+
+            <div class="book-cover database-cover">
+                🗄️
+            </div>
+
+            <div class="book-info">
+                <span class="book-category">Database</span>
+
+                <div class="book-rating">
+    ⭐⭐⭐⭐⭐ <span>4.5</span>
+</div>
+
+                <h3>DBMS Fundamentals</h3>
+
+                <p class="author">By P. Singh</p>
+
+                <p class="description">
+                    Learn SQL, database design,
+                    normalization and transactions.
+                </p>
+
+                <div class="book-bottom">
+                    <span class="price">₹379</span>
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart('DBMS Fundamentals', 379)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Book 6 -->
+        <div class="book-card" data-category="academic">
+
+            <div class="book-cover academic-cover">
+                📖
+            </div>
+
+            <div class="book-info">
+                <span class="book-category">Academic</span>
+
+                <div class="book-rating">
+    ⭐⭐⭐⭐⭐ <span>4.5</span>
+</div>
+
+                <h3>Data Structures & Algorithms</h3>
+
+                <p class="author">By R. Gupta</p>
+
+                <p class="description">
+                    Covers arrays, linked lists, stacks,
+                    queues, trees and algorithms.
+                </p>
+
+                <div class="book-bottom">
+                    <span class="price">₹499</span>
+
+                    <button
+                        class="cart-btn"
+                        onclick="addToCart('Data Structures & Algorithms', 499)"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- No Results -->
+    <p id="noResults" class="no-results">
+        No books found.
+    </p>
+
+
+    <footer>
+        <p>© Online Book Store</p>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
